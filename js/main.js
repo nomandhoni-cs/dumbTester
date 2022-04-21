@@ -38,7 +38,26 @@ window.addEventListener("load", (event) => {
     document.getElementById("iam-not").style.top = (.42* containerWidth)-20 + "px";
     document.getElementById("iam-not").style.left = (containerHeight*3.2) + 3 + "px";
     }
-
+    // else if (deviceWidth >= 376 && deviceHeight <= 425){
+    //   document.getElementById("no-btn").style.top = (.6 * deviceWidth) + "px";
+    //   document.getElementById("no-btn").style.left = (deviceHeight*.48) + "px";
+      
+    //   document.getElementById("yes-btn").style.top = (.6 * deviceWidth) + "px";
+    //   document.getElementById("yes-btn").style.left = (deviceHeight*.18)  + "px";
+      
+    //   document.getElementById("iam-not").style.top = (.6* deviceWidth) + "px";
+    //   document.getElementById("iam-not").style.left = (deviceHeight*.24) + "px";
+    //   }
+    //   else if (deviceWidth >= 321 && deviceHeight <= 375){
+    //     document.getElementById("no-btn").style.top = (.6 * deviceWidth) + "px";
+    //     document.getElementById("no-btn").style.left = (deviceHeight*.48) + "px";
+    //     console.log(deviceHeight);
+    //     document.getElementById("yes-btn").style.top = (.6 * deviceWidth) + "px";
+    //     document.getElementById("yes-btn").style.left = (deviceHeight*.18)  + "px";
+        
+    //     document.getElementById("iam-not").style.top = (.6* deviceWidth) + "px";
+    //     document.getElementById("iam-not").style.left = (deviceHeight*.24) + "px";
+    //     }
   console.log(containerHeight);
   return deviceHeight, deviceWidth, containerWidth, containerHeight;
 });
@@ -62,9 +81,6 @@ function hideItem(whatYouWantToHide) {
     document.getElementById("page-tittle").innerHTML = "You are Dumb!";
   }
 }
-
-// Initial Button Location
-function btnLocation(btnid) {}
 
 //No Button Js
 const noButton = document.getElementById("no-btn");
