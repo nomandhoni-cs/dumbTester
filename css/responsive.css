@@ -1,0 +1,49 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+  /* .container {width:450px} */
+  #iam-not {
+    top: 75%;
+    left: 25%;
+  }
+    #no-btn {
+        top: 75%;
+        left: 60%;
+    }
+    #yes-btn {
+        top: 75%;
+        left: 15%;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  /* .container {width:450px} */
+  #iam-not {
+    top: 75%;
+    left: 25%;
+  }
+  #no-btn {
+    top: 75%;
+    left: 60%;
+}
+#yes-btn {
+    top: 75%;
+    left: 15%;
+}
+}

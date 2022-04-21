@@ -1,20 +1,40 @@
+.container {
+background-color: aquamarine;
+}
 #dumb-display {
-    margin: auto;
-    width: 600px;
-    background-color: rgb(231, 230, 230);
-    height: 600px;
-    position: relative;
-  }
-  h1 {
-    text-align: center;
-  }
-  #no-btn {
-    position: absolute;
-    top: 540px;
-    left: 540px;
-  }
-  #dumb-answer {
-    display: none;
-  }
-  
-  
+  margin: auto;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
+}
+h1 {
+  text-align: center;
+}
+/* Button Area  Start*/
+#iam-not{
+  width: 150px;
+  height: 35px;
+  position: absolute;
+}
+#no-btn {
+  width: 80px;
+  height: 35px;
+  position: absolute;
+  /* top: 540px;
+  left: 540px;
+  z-index: 99999; */
+}
+
+#yes-btn{
+  width: 80px;
+  height: 35px;
+  position: absolute;
+}
+/* Button Area End */
+#dumb-question {
+  display: none;
+}
+#dumb-answer {
+  display: none;
+}
