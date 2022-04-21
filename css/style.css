@@ -1,3 +1,6 @@
+.container{
+    background-color: aquamarine;
+}
 #dumb-display {
     margin: auto;
     width: 600px;
@@ -12,6 +15,9 @@
     position: absolute;
     top: 540px;
     left: 540px;
+  }
+  #dumb-question{
+      display: none;
   }
   #dumb-answer {
     display: none;

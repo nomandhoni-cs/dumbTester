@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>You're Dumb</title>
+    <title id="page-tittle">Test - Are you Dumb?</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Latest compiled and minified CSS -->
     <link
@@ -17,10 +17,14 @@
   <body>
     <div class="container">
       <div id="dumb-display">
+          <div id="dumb-verify">
+              <h1 id="dumb-text">I know You're Dumb!!</h1>
+              <button class="btn btn-primary" id="iam-not" onclick="hideItem('dumb-verify')">No, I'm Not</button>
+          </div>
         <div id="dumb-question">
           <h1>Are you Dumb?</h1>
           <hr>
-          <button class="btn btn-success" id="yes-btn">Yes</button>
+          <button class="btn btn-success" id="yes-btn" onclick="hideItem('dumb-question')">Yes</button>
           <button class="btn btn-warning" id="no-btn">No</button>
         </div>
         <div id="dumb-answer">
