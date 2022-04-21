@@ -2,7 +2,15 @@
 window.addEventListener("load", (event) => {
   const deviceHeight = window.screen.height;
   const deviceWidth = window.screen.width;
-  return deviceHeight, deviceWidth;
+  const containerWidth = document.getElementById('container').offsetWidth;
+  const containerHeight = document.getElementById('container').offsetHeight;
+
+document.getElementById('dumb-display').style.width = Math.floor(.8*containerWidth) + 'px';
+document.getElementById('container').style.height = deviceHeight + 'px';
+
+
+  console.log('Working');
+  return deviceHeight, deviceWidth, containerWidth, containerHeight;
 });
 
 //Random Number Generator
@@ -25,10 +33,20 @@ function hideItem(whatYouWantToHide) {
     document.getElementById("page-tittle").innerHTML = 'You are Dumb!';
   }
 };
+//Function to set Card Width
+// if (definedValue == true) {
+//   let width = document.getElementById('dumb-display').style.width = Math.floor(.8*containerWidth) + 'px';
+//   console.log('Working')
+// };
+
+// Initial Button Location
+function btnLocation(btnid){
+  
+}
+
 //No Button Js
 const noButton = document.getElementById("no-btn");
 noButton.addEventListener("click", function () {
-  // const animateButton = document.getElementById("no-btn");
   let leftPosition = getRandomInt(0, 250);
   let topPosition = getRandomInt(65, 270);
   noButton.style.top = topPosition + "px";
