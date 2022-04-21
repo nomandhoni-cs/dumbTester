@@ -2,14 +2,44 @@
 window.addEventListener("load", (event) => {
   const deviceHeight = window.screen.height;
   const deviceWidth = window.screen.width;
-  const containerWidth = document.getElementById('container').offsetWidth;
-  const containerHeight = document.getElementById('container').offsetHeight;
+  const containerWidth = document.getElementById("container").offsetWidth;
+  const containerHeight = document.getElementById("container").offsetHeight;
 
-document.getElementById('dumb-display').style.width = Math.floor(.8*containerWidth) + 'px';
-document.getElementById('container').style.height = deviceHeight + 'px';
+  document.getElementById("dumb-display").style.width =
+    Math.floor(0.8 * containerWidth) + "px";
+  document.getElementById("container").style.height = deviceHeight + "px";
+  if (deviceWidth >= 1025 && deviceHeight <= 1440){
+    document.getElementById("no-btn").style.top = (.3 * containerWidth)-20 + "px";
+    document.getElementById("no-btn").style.left = (containerHeight*8.5) + "px";
+    
+    document.getElementById("yes-btn").style.top = (.3 * containerWidth)-20 + "px";
+    document.getElementById("yes-btn").style.left = (containerHeight*3.7) + "px";
+    
+    document.getElementById("iam-not").style.top = (.3 * containerWidth)-20 + "px";
+    document.getElementById("iam-not").style.left = (containerHeight*5.6) + "px";
+    }
+ else if (deviceWidth >= 769 && deviceHeight <= 1024){
+    document.getElementById("no-btn").style.top = (.33 * containerWidth)-20 + "px";
+    document.getElementById("no-btn").style.left = (containerHeight*6.55) + 40 + "px";
+    
+    document.getElementById("yes-btn").style.top = (.33 * containerWidth)-20 + "px";
+    document.getElementById("yes-btn").style.left = (containerHeight*3) -10 + "px";
+    
+    document.getElementById("iam-not").style.top = (.35* containerWidth)-20 + "px";
+    document.getElementById("iam-not").style.left = (containerHeight*4.44) + "px";
+    }
+  else if (deviceWidth >= 426 && deviceHeight <= 768){
+    document.getElementById("no-btn").style.top = (.42 * containerWidth)-20 + "px";
+    document.getElementById("no-btn").style.left = (containerHeight*5.5) - 5 + "px";
+    
+    document.getElementById("yes-btn").style.top = (.42 * containerWidth)-20 + "px";
+    document.getElementById("yes-btn").style.left = (containerHeight*2) + "px";
+    
+    document.getElementById("iam-not").style.top = (.42* containerWidth)-20 + "px";
+    document.getElementById("iam-not").style.left = (containerHeight*3.2) + 3 + "px";
+    }
 
-
-  console.log('Working');
+  console.log(containerHeight);
   return deviceHeight, deviceWidth, containerWidth, containerHeight;
 });
 
@@ -24,25 +54,17 @@ function hideItem(whatYouWantToHide) {
   document.getElementById(whatYouWantToHide).style.display = "none";
   if (whatYouWantToHide == "dumb-verify") {
     document.getElementById("dumb-question").style.display = "block";
-    document.getElementById("page-tittle").innerHTML = 'Are you Dumb?';
-  }
-  else{
+    document.getElementById("page-tittle").innerHTML = "Are you Dumb?";
+  } else {
     document.getElementById("dumb-answer").style.display = "block";
     document.getElementById("dumb-question").style.display = "none";
     document.getElementById("dumb-verify").style.display = "none";
-    document.getElementById("page-tittle").innerHTML = 'You are Dumb!';
+    document.getElementById("page-tittle").innerHTML = "You are Dumb!";
   }
-};
-//Function to set Card Width
-// if (definedValue == true) {
-//   let width = document.getElementById('dumb-display').style.width = Math.floor(.8*containerWidth) + 'px';
-//   console.log('Working')
-// };
+}
 
 // Initial Button Location
-function btnLocation(btnid){
-  
-}
+function btnLocation(btnid) {}
 
 //No Button Js
 const noButton = document.getElementById("no-btn");

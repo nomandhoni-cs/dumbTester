@@ -12,16 +12,23 @@ h1 {
   text-align: center;
 }
 /* Button Area  Start*/
+#iam-not{
+  width: 150px;
+  height: 35px;
+  position: absolute;
+}
 #no-btn {
+  width: 80px;
+  height: 35px;
   position: absolute;
   /* top: 540px;
   left: 540px;
   z-index: 99999; */
 }
-#iam-not{
-  position: absolute;
-}
+
 #yes-btn{
+  width: 80px;
+  height: 35px;
   position: absolute;
 }
 /* Button Area End */
