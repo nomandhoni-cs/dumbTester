@@ -10,8 +10,24 @@
 @media (min-width: 768px) and (max-width: 991px) {
 }
 
-/* small mobile :320px. */
-@media (max-width: 767px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  /* .container {width:450px} */
+  #iam-not {
+    top: 75%;
+    left: 36%;
+  }
+  #no-btn {
+    top: 75%;
+    left: 60%;
+  }
+  #yes-btn {
+    top: 75%;
+    left: 25%;
+  }
+  #download-btn {
+    top: 75%;
+    left: 41%;
+  }
 }
 
 /* Large Mobile :480px. */
@@ -21,18 +37,18 @@
     top: 75%;
     left: 25%;
   }
-    #no-btn {
-        top: 75%;
-        left: 60%;
-    }
-    #yes-btn {
-        top: 75%;
-        left: 15%;
-    }
-#download-btn{
-  top: 75%;
-  left: 35%;
-}
+  #no-btn {
+    top: 75%;
+    left: 60%;
+  }
+  #yes-btn {
+    top: 75%;
+    left: 15%;
+  }
+  #download-btn {
+    top: 75%;
+    left: 35%;
+  }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 375px) {
@@ -43,17 +59,16 @@
   #no-btn {
     top: 75%;
     left: 57%;
-}
-#yes-btn {
+  }
+  #yes-btn {
     top: 75%;
     left: 12%;
+  }
+  #download-btn {
+    top: 75%;
+    left: 32%;
+  }
 }
-#download-btn{
-  top: 75%;
-  left: 32%;
-}
-}
-
 
 @media only screen and (min-width: 300px) and (max-width: 320px) {
   #iam-not {
@@ -63,13 +78,13 @@
   #no-btn {
     top: 75%;
     left: 57%;
-}
-#yes-btn {
+  }
+  #yes-btn {
     top: 75%;
     left: 12%;
-}
-#download-btn{
-  top: 75%;
-  left: 30%;
-}
+  }
+  #download-btn {
+    top: 75%;
+    left: 30%;
+  }
 }

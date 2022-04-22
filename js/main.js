@@ -7,7 +7,7 @@ window.addEventListener("load", (event) => {
 
   document.getElementById("dumb-display").style.width =
     Math.floor(0.8 * containerWidth) + "px";
-  document.getElementById("container").style.height = deviceHeight + "px";
+  document.getElementById("container").style.height = .854 * deviceHeight + "px";
   if (deviceWidth >= 1025 && deviceHeight <= 1440){
     document.getElementById("no-btn").style.top = (.3 * containerWidth)-20 + "px";
     document.getElementById("no-btn").style.left = (containerHeight*8.5) + "px";
@@ -28,36 +28,36 @@ window.addEventListener("load", (event) => {
     document.getElementById("iam-not").style.top = (.35* containerWidth)-20 + "px";
     document.getElementById("iam-not").style.left = (containerHeight*4.44) + "px";
     }
-  else if (deviceWidth >= 426 && deviceHeight <= 768){
-    document.getElementById("no-btn").style.top = (.42 * containerWidth)-20 + "px";
-    document.getElementById("no-btn").style.left = (containerHeight*5.5) - 5 + "px";
+  // else if (deviceWidth >= 426 && deviceHeight <= 768){
+  //   document.getElementById("no-btn").style.top = (.42 * containerWidth)-20 + "px";
+  //   document.getElementById("no-btn").style.left = (containerHeight*5.5) - 5 + "px";
     
-    document.getElementById("yes-btn").style.top = (.42 * containerWidth)-20 + "px";
-    document.getElementById("yes-btn").style.left = (containerHeight*2) + "px";
+  //   document.getElementById("yes-btn").style.top = (.42 * containerWidth)-20 + "px";
+  //   document.getElementById("yes-btn").style.left = (containerHeight*2) + "px";
     
-    document.getElementById("iam-not").style.top = (.42* containerWidth)-20 + "px";
-    document.getElementById("iam-not").style.left = (containerHeight*3.2) + 3 + "px";
-    }
-    // else if (deviceWidth >= 376 && deviceHeight <= 425){
-    //   document.getElementById("no-btn").style.top = (.6 * deviceWidth) + "px";
-    //   document.getElementById("no-btn").style.left = (deviceHeight*.48) + "px";
+  //   document.getElementById("iam-not").style.top = (.42* containerWidth)-20 + "px";
+  //   document.getElementById("iam-not").style.left = (containerHeight*3.2) + 3 + "px";
+  //   }
+  //   else if (deviceWidth >= 376 && deviceHeight <= 425){
+  //     document.getElementById("no-btn").style.top = (.6 * deviceWidth) + "px";
+  //     document.getElementById("no-btn").style.left = (deviceHeight*.48) + "px";
       
-    //   document.getElementById("yes-btn").style.top = (.6 * deviceWidth) + "px";
-    //   document.getElementById("yes-btn").style.left = (deviceHeight*.18)  + "px";
+  //     document.getElementById("yes-btn").style.top = (.6 * deviceWidth) + "px";
+  //     document.getElementById("yes-btn").style.left = (deviceHeight*.18)  + "px";
       
-    //   document.getElementById("iam-not").style.top = (.6* deviceWidth) + "px";
-    //   document.getElementById("iam-not").style.left = (deviceHeight*.24) + "px";
-    //   }
-    //   else if (deviceWidth >= 321 && deviceHeight <= 375){
-    //     document.getElementById("no-btn").style.top = (.6 * deviceWidth) + "px";
-    //     document.getElementById("no-btn").style.left = (deviceHeight*.48) + "px";
-    //     console.log(deviceHeight);
-    //     document.getElementById("yes-btn").style.top = (.6 * deviceWidth) + "px";
-    //     document.getElementById("yes-btn").style.left = (deviceHeight*.18)  + "px";
+  //     document.getElementById("iam-not").style.top = (.6* deviceWidth) + "px";
+  //     document.getElementById("iam-not").style.left = (deviceHeight*.24) + "px";
+  //     }
+  //     else if (deviceWidth >= 321 && deviceHeight <= 375){
+  //       document.getElementById("no-btn").style.top = (.6 * deviceWidth) + "px";
+  //       document.getElementById("no-btn").style.left = (deviceHeight*.48) + "px";
+  //       console.log(deviceHeight);
+  //       document.getElementById("yes-btn").style.top = (.6 * deviceWidth) + "px";
+  //       document.getElementById("yes-btn").style.left = (deviceHeight*.18)  + "px";
         
-    //     document.getElementById("iam-not").style.top = (.6* deviceWidth) + "px";
-    //     document.getElementById("iam-not").style.left = (deviceHeight*.24) + "px";
-    //     }
+  //       document.getElementById("iam-not").style.top = (.6* deviceWidth) + "px";
+  //       document.getElementById("iam-not").style.left = (deviceHeight*.24) + "px";
+  //       }
   console.log(containerHeight);
   return deviceHeight, deviceWidth, containerWidth, containerHeight;
 });
