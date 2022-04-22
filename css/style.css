@@ -1,15 +1,13 @@
-.container {
-background-color: aquamarine;
-}
 #dumb-display {
   margin: auto;
   background-color: white;
   position: relative;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px gray;
+  box-shadow: 5px 5px 25px gray;
 }
 h1 {
   text-align: center;
+  padding: 10px;
 }
 /* Button Area  Start*/
 #iam-not{
@@ -21,9 +19,6 @@ h1 {
   width: 80px;
   height: 35px;
   position: absolute;
-  /* top: 540px;
-  left: 540px;
-  z-index: 99999; */
 }
 
 #yes-btn{

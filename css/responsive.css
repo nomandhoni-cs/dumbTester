@@ -1,17 +1,63 @@
+@media only screen and (min-width: 1141px) and (max-width: 2560px) {
+  #iam-not {
+    top: 75%;
+    left: 41%;
+  }
+  #no-btn {
+    top: 75%;
+    left: 65%;
+  }
+  #yes-btn {
+    top: 75%;
+    left: 25%;
+  }
+  #download-btn {
+    top: 75%;
+    left: 44%;
+  }
+}
 /* Normal desktop :1200px. */
-@media (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1025px) and (max-width: 1140px) {
+  #iam-not {
+    top: 75%;
+    left: 36%;
+  }
+  #no-btn {
+    top: 75%;
+    left: 60%;
+  }
+  #yes-btn {
+    top: 75%;
+    left: 25%;
+  }
+  #download-btn {
+    top: 75%;
+    left: 41%;
+  }
 }
 
 /* Normal desktop :992px. */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #iam-not {
+    top: 75%;
+    left: 36%;
+  }
+  #no-btn {
+    top: 75%;
+    left: 60%;
+  }
+  #yes-btn {
+    top: 75%;
+    left: 25%;
+  }
+  #download-btn {
+    top: 75%;
+    left: 41%;
+  }
 }
 
 /* Tablet desktop :768px. */
-@media (min-width: 768px) and (max-width: 991px) {
-}
-
 @media only screen and (min-width: 426px) and (max-width: 768px) {
-  /* .container {width:450px} */
   #iam-not {
     top: 75%;
     left: 36%;
