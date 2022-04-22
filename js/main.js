@@ -35,9 +35,24 @@ function hideItem(whatYouWantToHide) {
 //No Button Js
 const noButton = document.getElementById("no-btn");
 noButton.addEventListener("click", function () {
-  let leftPosition = getRandomInt(0, 250);
-  let topPosition = getRandomInt(65, 270);
+  var userDeviceWidth = window.screen.width;
+  //Click to change position
+if(userDeviceWidth >= 769 && userDeviceWidth <= 2560){
+  let leftPosition = getRandomInt(0, 620);
+  let topPosition = getRandomInt(90, 450);
   noButton.style.top = topPosition + "px";
-  console.log(leftPosition);
   noButton.style.left = leftPosition + "px";
+}
+else if(userDeviceWidth >= 425 && userDeviceWidth <= 768){
+  let leftPosition = getRandomInt(0, 450);
+  let topPosition = getRandomInt(60, 350);
+  noButton.style.top = topPosition + "px";
+  noButton.style.left = leftPosition + "px";
+}
+else if(userDeviceWidth >= 300 && userDeviceWidth <= 425){
+  let leftPosition = getRandomInt(0, 170);
+  let topPosition = getRandomInt(70, 250);
+  noButton.style.top = topPosition + "px";
+  noButton.style.left = leftPosition + "px";
+}
 });
