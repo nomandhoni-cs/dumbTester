@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="page-tittle">Test - Are you Dumb?</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
@@ -17,19 +17,37 @@
   </head>
   <body>
     <div class="container" id="container">
-      <div id="dumb-display" style="height : 93%">
-          <div id="dumb-verify">
-              <h1 id="dumb-text">I know You're Dumb!!</h1>
-              <button class="btn btn-primary" id="iam-not" onclick="hideItem('dumb-verify')">No, I'm Not</button>
-          </div>
+      <div id="dumb-display" style="height: 93%">
+        <div id="dumb-verify">
+          <h1 id="dumb-text">I know You're Dumb!!</h1>
+          <button
+            class="btn btn-primary"
+            id="iam-not"
+            onclick="hideItem('dumb-verify')"
+          >
+            No, I'm Not
+          </button>
+        </div>
         <div id="dumb-question">
           <h1>Are you Dumb?</h1>
-          <hr>
-          <button class="btn btn-success" id="yes-btn" onclick="hideItem('dumb-question')">Yes</button>
+          <hr />
+          <button
+            class="btn btn-success"
+            id="yes-btn"
+            onclick="hideItem('dumb-question')"
+          >
+            Yes
+          </button>
           <button class="btn btn-warning" id="no-btn">No</button>
         </div>
         <div id="dumb-answer">
-            <h1 id="dumb-text">I know You're !</h1>
+          <h1 id="dumb-text">I know You're !</h1>
+          <h3 style="text-align: center;">Get your Certification</h3>
+          <button class="btn btn-success" id="download-btn">
+            <a style="text-decoration: none; color: white;" href="assets/Certificate of Dumb.pdf" download="Certificate of Dumb.pdf">Download<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg></a>
+          </button>
         </div>
       </div>
     </div>
