@@ -31,6 +31,11 @@ h1 {
   height: 35px;
   position: absolute;
 }
+#download-btn{
+  width: 100px;
+  height: 35px;
+  position: absolute;
+}
 /* Button Area End */
 #dumb-question {
   display: none;
