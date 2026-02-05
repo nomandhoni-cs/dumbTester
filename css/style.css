@@ -1,40 +1,75 @@
-#dumb-display {
-  margin: auto;
-  background-color: white;
-  position: relative;
-  border-radius: 10px;
-  box-shadow: 5px 5px 25px gray;
-}
-h1 {
-  text-align: center;
-  padding: 10px;
-}
-/* Button Area  Start*/
-#iam-not{
-  width: 150px;
-  height: 35px;
-  position: absolute;
-}
-#no-btn {
-  width: 80px;
-  height: 35px;
-  position: absolute;
+/* Reset and Body Centering */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    overflow: hidden; /* Prevents scrollbars when button moves near edge */
 }
 
-#yes-btn{
-  width: 80px;
-  height: 35px;
-  position: absolute;
+/* The wrapper centers the box on the screen */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
-#download-btn{
-  width: 100px;
-  height: 35px;
-  position: absolute;
+
+/* The white card */
+#dumb-display {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    /* Responsive sizing */
+    width: 90%;
+    max-width: 500px; /* Won't get wider than this on desktop */
+    min-height: 400px; /* Ensures enough room for button to run */
+    position: relative; /* CRITICAL: The moving button is relative to THIS box */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-/* Button Area End */
-#dumb-question {
-  display: none;
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
-#dumb-answer {
-  display: none;
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for content sections to ensure they center properly */
+.content-section {
+    width: 100%;
+    text-align: center;
+}
+
+.button-box {
+    margin-top: 20px;
+}
+
+/* Specific styling for the Question buttons */
+.button-box-question {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between Yes and No */
+    margin-top: 30px;
+}
+
+/* The Yes Button */
+#yes-btn {
+    width: 80px;
+    z-index: 10;
+}
+
+/* The No Button */
+#no-btn {
+    width: 80px;
+    transition: 0.1s ease; /* Makes movement slightly smoother */
 }
