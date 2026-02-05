@@ -1,75 +1,112 @@
-/* Reset and Body Centering */
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f0f2f5;
-    overflow: hidden; /* Prevents scrollbars when button moves near edge */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* The wrapper centers the box on the screen */
-.main-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+#container {
+  width: 90vw;
+  max-width: 750px;
+  height: 80vh;
+  min-height: 420px;
 }
 
-/* The white card */
 #dumb-display {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    /* Responsive sizing */
-    width: 90%;
-    max-width: 500px; /* Won't get wider than this on desktop */
-    min-height: 400px; /* Ensures enough room for button to run */
-    position: relative; /* CRITICAL: The moving button is relative to THIS box */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  overflow: hidden;
 }
 
 h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0 0 2rem 0;
 }
 
 h3 {
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
 }
 
-/* Container for content sections to ensure they center properly */
-.content-section {
-    width: 100%;
-    text-align: center;
+/* Hide sections by default */
+#dumb-question,
+#dumb-answer {
+  display: none;
 }
 
-.button-box {
-    margin-top: 20px;
+/* Buttons - larger & touch friendly */
+.btn {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.2s;
 }
 
-/* Specific styling for the Question buttons */
-.button-box-question {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between Yes and No */
-    margin-top: 30px;
+.btn a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
 }
 
-/* The Yes Button */
+/* Button positions - fully responsive with % + transform */
+#iam-not {
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+}
+
 #yes-btn {
-    width: 80px;
-    z-index: 10;
+  top: 65%;
+  left: 35%;
+  transform: translateX(-50%);
+  min-width: 110px;
 }
 
-/* The No Button */
 #no-btn {
-    width: 80px;
-    transition: 0.1s ease; /* Makes movement slightly smoother */
+  top: 65%;
+  left: 65%;
+  transform: translateX(-50%);
+  min-width: 110px;
+}
+
+#download-btn {
+  top: 72%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  font-size: 1.4rem;
+}
+
+/* Mobile adjustments (optional, looks great even without) */
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h3 { font-size: 1.3rem; }
+  #dumb-display { padding: 20px; border-radius: 12px; }
+  .btn { height: 50px; font-size: 1.1rem; }
+  #yes-btn { left: 30%; }
+  #no-btn { left: 70%; }
 }

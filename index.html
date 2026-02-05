@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="You can check, Are you dumb or not in this website. Hi, My name is Abdullah Al Noman... (your full bio)" />
+    <meta name="google-site-verification" content="hbvOMagE72pmdSiLGdXFlflDd0r08Egtjuo8kqZU4X8" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title id="page-tittle">Test - Are you Dumb?</title>
-    <!-- Using Bootstrap 5 for nicer buttons (updated from v3) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
     
-    <!-- Main Container -->
-    <div class="main-wrapper">
-        <div id="dumb-display">
-            
-            <!-- Step 1: Verification -->
-            <div id="dumb-verify" class="content-section">
-                <h1>Hey, I heard that You're Dumb!!</h1>
-                <div class="button-box">
-                    <button class="btn btn-primary" onclick="hideItem('dumb-verify')">No, I'm Not</button>
-                </div>
-            </div>
-
-            <!-- Step 2: The Question -->
-            <div id="dumb-question" class="content-section" style="display: none;">
-                <h1>Are you Dumb?</h1>
-                <div class="button-box-question">
-                    <button class="btn btn-success" id="yes-btn" onclick="hideItem('dumb-question')">Yes</button>
-                    <!-- No button starts in the flow, then becomes absolute -->
-                    <button class="btn btn-warning" id="no-btn">No</button>
-                </div>
-            </div>
-
-            <!-- Step 3: Result -->
-            <div id="dumb-answer" class="content-section" style="display: none;">
-                <h1>I knew that, You're Dumb!</h1>
-                <h3>Get your Certification</h3>
-                <div class="button-box">
-                    <a class="btn btn-success" href="assets/Certificate of Dumb.pdf" download="Certificate of Dumb.pdf">
-                        Download 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
+    <!-- Bootstrap 3 (kept since you were using it) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    
+    <!-- Only one CSS file now -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div id="dumb-display">
+        <div id="dumb-verify">
+          <h1 id="dumb-text">Hey, I heard that You're Dumb!!</h1>
+          <button class="btn btn-primary" id="iam-not" onclick="hideItem('dumb-verify')">
+            No, I'm Not
+          </button>
         </div>
+
+        <div id="dumb-question">
+          <h1>Are you Dumb?</h1>
+          <button class="btn btn-success" id="yes-btn" onclick="hideItem('dumb-question')">
+            Yes
+          </button>
+          <button class="btn btn-warning" id="no-btn">No</button>
+        </div>
+
+        <div id="dumb-answer">
+          <h1 id="dumb-text">I knew that, You're Dumb!</h1>
+          <h3>Get your Certification</h3>
+          <button class="btn btn-success" id="download-btn">
+            <a href="assets/Certificate of Dumb.pdf" download="Certificate of Dumb.pdf">
+              Download <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+              </svg>
+            </a>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <script src="main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
