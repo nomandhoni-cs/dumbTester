@@ -1,9 +1,8 @@
-// Function for Display Item
-function hideItem(whatYouWantToHide) {
-  const elementToHide = document.getElementById(whatYouWantToHide);
-  elementToHide.style.display = "none";
-
-  if (whatYouWantToHide == "dumb-verify") {
+// Function to hide current section and show next
+function hideItem(current) {
+  document.getElementById(current).style.display = "none";
+  
+  if (current === "dumb-verify") {
     document.getElementById("dumb-question").style.display = "block";
     document.getElementById("page-tittle").innerHTML = "Are you Dumb?";
   } else {
@@ -12,40 +11,26 @@ function hideItem(whatYouWantToHide) {
   }
 }
 
-// Random Number Generator
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-}
-
+// Dodging "No" button - now fully dynamic & responsive
 const noButton = document.getElementById("no-btn");
-const container = document.getElementById("dumb-display");
 
-// Logic to move the button
-function moveButton() {
-  // 1. Get the actual dimensions of the white box (container)
-  const containerRect = container.getBoundingClientRect();
-  const btnRect = noButton.getBoundingClientRect();
+noButton.addEventListener("click", function(e) {
+  e.preventDefault(); // prevent any default behavior
+  
+  const card = document.getElementById("dumb-display");
+  const btnWidth = noButton.offsetWidth;
+  const btnHeight = noButton.offsetHeight;
+  const cardWidth = card.clientWidth;
+  const cardHeight = card.clientHeight;
 
-  // 2. Calculate the maximum X and Y coordinates inside the box
-  // We subtract the button size so it doesn't overflow out of the box
-  const maxX = containerRect.width - btnRect.width; 
-  const maxY = containerRect.height - btnRect.height;
+  // Stay in bottom 60% of card and keep safe margins
+  const maxLeft = cardWidth - btnWidth - 40;
+  const maxTop = cardHeight - btnHeight - 40;
+  const minTop = cardHeight * 0.4;
 
-  // 3. Generate random coordinates
-  const randomX = getRandomInt(0, maxX);
-  const randomY = getRandomInt(0, maxY);
+  const left = 20 + Math.random() * (maxLeft - 40);
+  const top = minTop + Math.random() * (maxTop - minTop);
 
-  // 4. Apply new position
-  // We set position absolute so it breaks out of the flex layout
-  noButton.style.position = "absolute";
-  noButton.style.left = randomX + "px";
-  noButton.style.top = randomY + "px";
-}
-
-// Add Event Listeners
-// 'mouseover' for Desktop (when mouse hovers)
-noButton.addEventListener("mouseover", moveButton);
-// 'click' for Mobile (when they tap)
-noButton.addEventListener("click", moveButton);
+  noButton.style.left = `${left}px`;
+  noButton.style.top = `${top}px`;
+});
